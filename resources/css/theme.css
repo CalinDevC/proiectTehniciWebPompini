@@ -1,0 +1,27 @@
+body {
+    /* variabila pentru cularea de baza*/
+    --main-color: #3BA7BF;
+    --main-color-t: rgba(59, 167, 191, 0.5);
+    /*  variabilele pentru celelalte culori */
+    --background-color: #ffffff;
+    --text-color: #333333;
+    --border-color: #2D83A6;
+    --highlight-color: #63E4F2;
+    --gradient-body: linear-gradient(transparent, transparent 30%, white 50%, transparent 70%, transparent);
+    background-color: var(--background-color);
+    color: var(--text-color);
+
+
+ 
+}
+
+footer{
+    background-color: var(--main-color-t);
+
+}
+
+header {
+    background-color: var(--main-color-t);
+}
+
+
