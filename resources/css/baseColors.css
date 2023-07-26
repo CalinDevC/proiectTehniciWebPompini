@@ -1,0 +1,13 @@
+﻿/* Color Theme Swatches in Hex */
+.underwater-1-hex { color: #195973; }
+.underwater-2-hex { color: #2D83A6; }
+.underwater-3-hex { color: #3BA7BF; }
+.underwater-4-hex { color: #053A40; }
+.nderwater-5-hex { color: #63E4F2; }
+
+/* Color Theme Swatches in RGBA */
+.underwater-1-rgba { color: rgba(25, 89, 114, 1); }
+.underwater-2-rgba { color: rgba(44, 131, 165, 1); }
+.underwater-3-rgba { color: rgba(59, 167, 191, 1); }
+.underwater-4-rgba { color: rgba(5, 57, 63, 1); }
+.underwater-5-rgba { color: rgba(99, 227, 242, 1); }
