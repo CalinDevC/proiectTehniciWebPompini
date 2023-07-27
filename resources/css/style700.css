@@ -1,0 +1,36 @@
+html {
+    font-size: 10px;
+}
+
+
+body {
+    --spatiere-pagina: 10px;
+    --padding-sectiune: 5px;
+
+}
+
+.div-tabel {
+    overflow-x: scroll;
+}
+
+.continut-tabel {
+    font-size: 2.5vw;
+    width: 98vw;
+}
+
+.tabel {
+    border-spacing: 0;
+}
+
+#grid-pagina {
+    display: block;
+}
+
+#grid-pagina>* {
+    margin-bottom: 15px;
+}
+
+img {
+    width: 100%;
+    max-width: 400px;
+}
