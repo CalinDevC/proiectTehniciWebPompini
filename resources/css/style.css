@@ -128,3 +128,7 @@ body {}
         max-width: 100%;
     }
 }
+
+#tabel caption {
+    caption-side: bottom;
+}
