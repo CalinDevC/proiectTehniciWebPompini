@@ -1,0 +1,16 @@
+.c1{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.c1 h1{
+      color: rgb(0, 0, 0);
+}
+
+h1 {
+    color: rgb(215, 184, 59);
+}
+
+h1:hover {
+    color: red;
+}

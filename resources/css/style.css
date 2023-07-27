@@ -1,0 +1,130 @@
+body {}
+
+
+
+#grid-pagina {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "z-banner z-banner z-banner"
+                        "z-tabel z-evenimente z-evenimente"
+                        "z-tabel z-anunturi z-anunturi"
+                        "z-utilizatori-online z-statistici z-server"
+                        "z-diverse z-diverse z-diverse";
+
+
+}
+
+#grid-pagina > * {
+    outline: 1px solid #3BA7BF;
+    margin: 0;
+
+}
+
+#grid-pagina img {
+    max-width: 100%;
+
+}
+
+#grid-pagina iframe {
+   max-width: 100%;
+}
+
+#banner {
+    grid-area: z-banner;
+}
+
+#tabel {
+    grid-area: z-tabel;
+}
+
+#evenimente {
+    grid-area: z-evenimente;
+}
+
+#anunturi {
+    grid-area: z-anunturi;
+}
+
+#utilizatori-online {
+    grid-area: z-utilizatori-online;
+}
+
+#statistici {
+    grid-area: z-statistici;
+}
+#server {
+    grid-area: z-server;
+}
+
+#diverse {
+    grid-area: z-diverse;
+}
+/*Stilizare tabel versiunea mea*/
+/*
+#tabel th {
+    border: 2px solid #ddd;
+    background-color: #3BA7BF;
+    color: white;
+}
+
+#tabel td, #tabel th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+
+#tabel tr:nth-child(even){background-color: #f2f2f2;}
+
+#tabel tr:hover {background-color: #ddd;}
+*/
+
+/* Stilizare  tabel versiunea din cerinte */
+
+#tabel th {
+    border: 2px solid #ddd; /*aici am pus borderul >1px decat la td*/
+    padding: 12px; /*am pus si paddingul mai mare la capete de coloana*/
+    background-color: #3BA7BF;
+    color: white;
+}
+#tabel {
+    border-collapse: collapse; /*sa nu fie spatiere intre borders*/
+    width: 100%;
+}
+
+#tabel td {
+    border: 1px solid #ccc;
+    padding: 8px;
+}
+
+#tabel tr:nth-child(even) {
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+#tabel tr:nth-child(even) td {
+    color: #3BA7BF;
+}
+
+#tabel tr:nth-child(odd) td {
+    color: #2D83A6;
+}
+
+/* tranzitia de 3/4 secunde pentru rows la hover */
+#tabel tr {
+    transition: background-color 0.75s, font-size 0.75s;
+}
+
+#tabel tr:hover {
+    background-color: #f2f2f2;
+}
+
+#tabel tr:hover td {
+    font-size: 120%; /* schimb fontul la hover, mi se poare mare 20% */
+}
+
+/* ecrane mici si medii */
+@media screen and (max-width: 1000px) {
+    #tabel {
+        overflow-x: auto; /* scrollbar orizontal pentru tabel */
+        max-width: 100%;
+    }
+}
