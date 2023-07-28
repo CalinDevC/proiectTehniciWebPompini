@@ -26,6 +26,8 @@
     <link href="resources/css/style.css" rel="stylesheet" type="text/css" />
     <link href="resources/css/style1000.css" rel="stylesheet" type="text/css" media="screen and (max-width: 1000px)"/>
     <link href="resources/css/style700.css" rel="stylesheet" type="text/css" media="screen and (max-width: 700px)"/>
+    <link href="resources/css/tabel.css" rel="stylesheet" type="text/css" />
+    <link href="resources/css/back-to-top.css" rel="stylesheet" type="text/css" />
 
 </head>
 <body>
@@ -83,7 +85,7 @@
 
             <table>
                 <h2>Programul nostru de lucru</h2>
-                <caption id="captionTabel">Samabata, Duminica si in zilele de sarbatori legale, manerul usii <br>CURENTEAZA</br</caption>
+                <caption id="captionTabel">Samabata, Duminica si in afara programului, manerul usii <strong>CURENTEAZA</strong></caption>
                 <thead>
                 <tr>
                     <th>Zi</th>
@@ -164,6 +166,7 @@
             <section id="anunturi">
                 <h2>Zona 4 - Anunturi</h2>
 
+
                 <p> Zona 4 este pentru anunțuri. Veți pune un placeholder.</p>
                 <p> Zona 4 este pentru anunțuri. Veți pune un placeholder.</p>
                 <p> Zona 4 este pentru anunțuri. Veți pune un placeholder.</p>
@@ -184,7 +187,7 @@
             <section id="statistici">
                 <h2>Zona 6 - Placeholder</h2>
 
-                <p> Zona 6 este pentru date despre utilizator și statistici. Placeholder.</p>
+                 <p> Zona 6 este pentru date despre utilizator și statistici. Placeholder.</p>
                 <p> Zona 6 este pentru date despre utilizator și statistici. Placeholder.</p>
                 <p> Zona 6 este pentru date despre utilizator și statistici. Placeholder.</p>
                 <p> Zona 6 este pentru date despre utilizator și statistici. Placeholder.</p>
@@ -193,6 +196,20 @@
 
             <section id="server">
                 <h2>Zona 7 - Placeholder</h2>
+
+                <article>
+                    <h3>Exemple video montaj</h3>
+                    <p>Dacă doriți să montati singuri automatizarea, desi nu este recomandat, <strong>mai intai informati-va!</strong></p>
+
+                    <div class="video-links">
+                        <a href="https://www.youtube.com/embed/gWGehQOVBEs" target="ifr-video">Prima instalare</a>
+                        <a href="https://www.youtube.com/embed/mYm7SA237-k" target="ifr-video">Meniul avansat</a>
+                        <a href="https://www.youtube.com/embed/pAvXmxwIWPk" target="ifr-video">Conexiuni hidraulice</a>
+                    </div>
+
+                    <iframe name="ifr-video" width="560" height="315" src="https://www.youtube.com/embed/gWGehQOVBEs"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </article>
 
                 <p>Zona 7 este pentru date despre site și server. Placeholder.</p>
                 <p>Zona 7 este pentru date despre site și server. Placeholder.</p>
@@ -227,23 +244,11 @@
 
                 </article>
 
-                <article>
-                    <h3>Exemple video montaj</h3>
-                    <p>Dacă doriți să montati singuri automatizarea, desi nu este recomandat, <strong>mai intai informati-va!</strong></p>
-
-                    <!--  <div style="position: relative;">-->
-                    <a href="https://www.youtube.com/embed/gWGehQOVBEs" target="ifr-video">Prima instalare</a>
-                    <a href="https://www.youtube.com/embed/mYm7SA237-k" target="ifr-video">Meniul avansat</a>
-                    <a href="https://www.youtube.com/embed/pAvXmxwIWPk" target="ifr-video">Conexiuni hidraulice</a>
-
-                    <iframe name="ifr-video" width="560" height="315" src="https://www.youtube.com/embed/gWGehQOVBEs"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    <!--</div>-->
-                </article>
 
 
 
-            <section id="promotii">
+
+                <section id="promotii">
                 <h2>Promotii</h2>
                 <article>
                     <h3>Ofertele verii</h3>
@@ -334,7 +339,10 @@
     <p><a href="mailto:reclamatii@pompini.ro">pentru reclamatii scrie-ne la reclamatii@pompini.ro</a></p>
     <p><small>Copyright &copy;<time datetime="2023">2023</time> pompini.ro</small></p>
 
-    <a href="#" title="back to top" id="link-top"><div id="top">back</div></a>
+    <a href="#" class="back-to-top-btn" id="tooltip">
+        <span class="circle"></span>
+        <span class="triangle">&#5123;</span>
+    </a>
     </footer>
 
     <!-- https://github.com/CalinDevC/proiectTehniciWebPompini -->
