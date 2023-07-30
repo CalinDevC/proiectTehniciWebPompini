@@ -36,8 +36,8 @@ a.back-to-top-btn .circle {
 
 a.back-to-top-btn .triangle {
     position: absolute;
-    top: 4px;
-    left: 16px;
+    top: 1px;
+    left: 14px;
     font-size: 30px;
     font-weight: bolder;
 }
