@@ -1,0 +1,53 @@
+*{
+    box-sizing: border-box;
+}
+body {
+    --latime-buton: 150px;
+    --inaltime-nav:30px;
+    --spatiere-main:45px;
+    --culoare-text-meniu:#F2DC6B;
+    --culoare-meniu:#3BA7BF;
+    --culoare-meniu-activ:#63E4F2;
+    margin: 0px;
+}
+
+ul.meniu li {
+    width: var(--latime-buton);
+    height: var(--inaltime-nav);
+    background-color: var(--culoare-meniu);
+    line-height:var(--inaltime-nav);
+    border: 1px solid black;
+    list-style-type: none; /*am scapat de bulleturi*/
+    color: var(--text-color);
+    text-align: center;
+    vertical-align: center;
+}
+
+ul.meniu a, ul.meniu div {
+    color: var(--text-color);
+    text-decoration: none;/*scap de underline*/
+    display: block; /*pentru a iintinde link pe tot butonul*/
+    height: 100%;
+    cursor: pointer;
+}
+
+ul.meniu {
+    display: flex;
+}
+
+ul.meniu>li:hover ul {
+    display: block;
+}
+
+ul.meniu, ul {
+    margin: 0;
+    padding: 0;
+}
+
+ul.meniu ul{
+    display: none; /*ascund submeniu*/
+    z-index: 100;
+    position: relative;
+
+}
+

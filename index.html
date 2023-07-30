@@ -28,6 +28,8 @@
     <link href="resources/css/style700.css" rel="stylesheet" type="text/css" media="screen and (max-width: 700px)"/>
     <link href="resources/css/tabel.css" rel="stylesheet" type="text/css" />
     <link href="resources/css/back-to-top.css" rel="stylesheet" type="text/css" />
+    <link href="resources/css/nav.css" rel="stylesheet" type="text/css" />
+   <!-- <link href="resources/css/reset.css" rel="stylesheet" type="text/css" />-->
 
 </head>
 <body>
@@ -37,40 +39,53 @@
 <!-- Meniul -->
     <nav>
         <ul class="meniu">
-            <li><a href="index.html"><i class="fa-solid fa-house"></i> Acasa</a></li>
-
-
-            <li><a href="#preturi-montaj">Preturi montaj</a></li>
-            <li><a href="#tutoriale-montaj"> Tutoriale instalare și configurare</a></li>
-            <li><a href="#promotii">Promotii</a></li>
-            <li class="c1"><a href="#index-intrebari">Întrebări</a></li>
-
-
             <li>
-                Echipamente și componente pentru automatizări
+                <a href="index.html"><i class="fa-solid fa-house"></i> Acasa</a>
                 <ul>
-                    <li><a href="#convertizoare.html">Variatoare de turatie</a></li>
-                    <li><a href="#presostate.html">Presostate electronice</a></li>
-                    <li><a href="#pompe.html">Pompe submersibile</a></li>
+                    <li><a href="#link1">Link 1</a></li>
+                    <li><a href="#link2">Link 2</a></li>
+                    <li><a href="#link3">Link 3</a></li>
+                </ul>
+
+            </li>
+            <li>
+                <div id="produse">Produse</div>
+                <!-- Submeniu -->
+                <ul>
+                    <li><a href="#pompe">Automatizari</a></li>
+                    <li><a href="#convertizoare">Convertizoare</a></li>
+                    <li><a href="#presostate">Presostate</a></li>
+                    <li><a href="#pompe">Pompe</a></li>
                 </ul>
             </li>
+
+            <li><a href="#preturi-montaj">Preturi montaj</a></li>
+            <li><a href="#tutoriale-montaj"> Tutoriale</a></li>
+            <li><a href="#promotii">Promotii</a></li>
+
+            <!-- submeniu2 -->
+            <li>
+                <div id="alt-submeniu">Submeniu 2</div>
+                <ul>
+                    <li><a href="#link1">Link 1</a></li>
+                    <li><a href="#link2">Link 2</a></li>
+                    <li><a href="#link3">Link 3</a></li>
+                </ul>
+            </li>
+
+            <li><a href="#index-intrebari">Intrebari</a></li>
             <li><a href="#">Inregistrare</a></li>
         </ul>
-
-
-
-
     </nav>
 
 
 
-   
 
     <main>
         <div id="grid-pagina">
 
-
-            <section id="banner">
+<!--Bannerul principal-->
+          <section id="banner">
                 <figure>
                     <img src="./resources/img/banner.png">
 
@@ -91,7 +106,7 @@
                     <th>Zi</th>
                     <th>Deschidem</th>
                     <th>Inchidem</th>
-                    <th>Lunch-Break</th>
+                    <th>Pauza</th>
 
                 </tr>
                 </thead>
@@ -151,7 +166,7 @@
 
     </section>
 
-    </section>
+
 
 
             <section id="evenimente">
@@ -165,6 +180,19 @@
 
             <section id="anunturi">
                 <h2>Zona 4 - Anunturi</h2>
+                <article>
+                    <h3>Exemple video montaj</h3>
+                    <p>Dacă doriți să montati singuri automatizarea, desi nu este recomandat, <strong>mai intai informati-va!</strong></p>
+
+                    <div class="video-links">
+                        <a href="https://www.youtube.com/embed/gWGehQOVBEs" target="ifr-video">Prima instalare</a>
+                        <a href="https://www.youtube.com/embed/mYm7SA237-k" target="ifr-video">Meniul avansat</a>
+                        <a href="https://www.youtube.com/embed/pAvXmxwIWPk" target="ifr-video">Conexiuni hidraulice</a>
+                    </div>
+
+                    <iframe name="ifr-video" width="560" height="315" src="https://www.youtube.com/embed/gWGehQOVBEs"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </article>
 
 
                 <p> Zona 4 este pentru anunțuri. Veți pune un placeholder.</p>
@@ -187,7 +215,7 @@
             <section id="statistici">
                 <h2>Zona 6 - Placeholder</h2>
 
-                 <p> Zona 6 este pentru date despre utilizator și statistici. Placeholder.</p>
+                <p> Zona 6 este pentru date despre utilizator și statistici. Placeholder.</p>
                 <p> Zona 6 este pentru date despre utilizator și statistici. Placeholder.</p>
                 <p> Zona 6 este pentru date despre utilizator și statistici. Placeholder.</p>
                 <p> Zona 6 este pentru date despre utilizator și statistici. Placeholder.</p>
@@ -197,19 +225,6 @@
             <section id="server">
                 <h2>Zona 7 - Placeholder</h2>
 
-                <article>
-                    <h3>Exemple video montaj</h3>
-                    <p>Dacă doriți să montati singuri automatizarea, desi nu este recomandat, <strong>mai intai informati-va!</strong></p>
-
-                    <div class="video-links">
-                        <a href="https://www.youtube.com/embed/gWGehQOVBEs" target="ifr-video">Prima instalare</a>
-                        <a href="https://www.youtube.com/embed/mYm7SA237-k" target="ifr-video">Meniul avansat</a>
-                        <a href="https://www.youtube.com/embed/pAvXmxwIWPk" target="ifr-video">Conexiuni hidraulice</a>
-                    </div>
-
-                    <iframe name="ifr-video" width="560" height="315" src="https://www.youtube.com/embed/gWGehQOVBEs"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </article>
 
                 <p>Zona 7 este pentru date despre site și server. Placeholder.</p>
                 <p>Zona 7 este pentru date despre site și server. Placeholder.</p>
@@ -225,7 +240,7 @@
                         <li>Alegeți un loc potrivit pentru instalare. <b>Presostatul electronic</b> trebuie montat într-un loc uscat și bine ventilat.</li>
                         <li>Faceți o gaură în <s>perete</s> <ins> teava </ins>sau în peretele rezervorului de apă, de dimensiunea corespunzătoare a presostatului electronic.</li>
                         <li>Introduceți <b>presostatul electronic</b> în gaură și fixați-l cu șuruburi.....</li>
-                        <li>Setați presiunea de pornire P1 - <i>DP Start</i> -  și presiunea de oprire P2 - <i>DP Stop</i>  a <b>automatizarii apei</b>.</li>
+                        <li>Setați presiunea de pornire P1 - <i>DP Start</i> - și presiunea de oprire P2 - <i>DP Stop</i>  a <b>automatizarii apei</b>.</li>
                         <li>Rugati-va sa functioneze si, vorba instalatorului: <q>Garantia e pe viata, daca nu traiti mult!</q></li>
                     </ul>
                     <aside> Intotdeauna, utilizați un <b>presostat electronic</b> care este compatibil cu <b>pompa de apă</b> pe care o folosiți.</aside>
@@ -345,8 +360,5 @@
     </a>
     </footer>
 
-    <!-- https://github.com/CalinDevC/proiectTehniciWebPompini -->
-
-
-</body>
+ </body>
 </html>
