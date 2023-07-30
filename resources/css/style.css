@@ -1,4 +1,8 @@
 body {
+    --spatiere-pagina: 60px;
+    --padding-sectiune: 10px;
+    --grid-gap: 30px;
+
 
 }
 
@@ -6,6 +10,10 @@ body {
 
 #grid-pagina {
     display: grid;
+    box-shadow: 0 0 20px var(--text-color);
+    margin-left: var(--spatiere-pagina);
+    margin-right: var(--spatiere-pagina);
+    grid-gap: var(--grid-gap);
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas: "z-banner z-banner z-banner"
                         "z-tabel z-evenimente z-evenimente"
@@ -17,12 +25,12 @@ body {
 }
 
 #grid-pagina > * {
-    outline: 1px solid #3BA7BF;
+    outline: 3px solid var(--main-color);
     margin: 0;
-
+    padding: var(--padding-sectiune);
 }
 #grid-pagina {
-@media screen and (max-width: 768px)
+@media screen and (max-width: 1000px)
         transition: none; /* Dezactivare tranziții */
 }
 
@@ -95,8 +103,14 @@ body {
 
 }
 
-/* asezare iframe  video */
-iframe[name="ifr-video"] {
+/* asezare iframe  video veche*/
+iframe {
     display: block;
-    margin: 0 auto; /* am centrat orizontal iframeul */
+    margin: 0 auto; /* am centrat orizontal iframeul*/
+    width: 57%;
+    max-width: 800px;
+    min-width: 200px;
+    
 }
+
+

@@ -6,15 +6,20 @@ html{
 body{
     --spatiere-pagina: 30px;
     --padding-sectiune: 10px;
+    --grid-gap: 10px;
 }
 
-.continut-tabel {
+
+.div-tabel {
+    overflow-x: scroll;
     font-size: 2vw;
     width: 90vw;
 }
-
 #grid-pagina{
     display:grid;
+    margin-left: var(--spatiere-pagina);
+    margin-right: var(--spatiere-pagina);
+    grid-gap: var(--grid-gap);
     grid-template-columns: repeat(2,1fr);
     grid-template-areas:
         "z-banner z-banner"
