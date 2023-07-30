@@ -33,7 +33,8 @@
 
 #tabel td {
     border: 1px solid lightgrey;
-    padding: 8px;
+    padding: 0px 8px;
+    text-align: center;
 }
 
 #tabel tr:nth-child(even) {
@@ -41,11 +42,11 @@
 }
 
 #tabel tr:nth-child(even) td {
-    color: #3BA7BF;
+    color: var(--main-color);
 }
 
 #tabel tr:nth-child(odd) td {
-    color: #2D83A6;
+    color: var(--main-color-t);
 }
 
 /* tranzitia de 3/4 secunde pentru rows la hover */
@@ -58,7 +59,7 @@
 }
 
 #tabel tr:hover td {
-    font-size: 120%; /* schimb fontul la hover, mi se poare mare 20% */
+    font-size: 115%; /* schimb fontul la hover, mi se poare mare 20% */
 }
 
 /* ecrane mici si medii */
