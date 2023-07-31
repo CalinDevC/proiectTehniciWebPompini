@@ -1,12 +1,13 @@
 html{
-    font-size: 15px;
+    font-size: 13px;
+    transition: all 0.3s ease;
 }
 
 
 body{
-    --spatiere-pagina: 30px;
-    --padding-sectiune: 10px;
-    --grid-gap: 10px;
+    --spatiere-pagina: 20px;
+    --padding-sectiune: 5px;
+    --grid-gap: 5px;
 }
 
 

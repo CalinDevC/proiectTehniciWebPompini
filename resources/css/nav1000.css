@@ -1,0 +1,10 @@
+#acasa{
+        display: none;
+    }
+
+#acasa-mediu{
+        display: inline-block;
+    }
+body{
+        --latime-buton: 85px;
+    }

@@ -1,0 +1,33 @@
+#hamburger{
+    display:block;
+    height: var(--inaltime-nav);
+}
+#hamburger img {
+    height: 100%;
+}
+#ch-menu:checked+ul.meniu{
+    display: block;
+}
+
+
+
+body{
+    --latime-buton: 100%;
+}
+
+ul.meniu{
+    display:none;
+    animation-name: animatie_hamburger;
+    animation-fill-mode: forwards;
+    animation-duration: 0.3s;
+    animation-timing-function: linear;
+    transform: scale(0, 0);
+    transform-origin: 0 0;
+}
+
+@keyframes animatie_hamburger {
+    100%{
+        opacity: 1;
+        transform: scale(1, 1);
+    }
+}

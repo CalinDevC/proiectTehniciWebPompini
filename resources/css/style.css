@@ -1,5 +1,5 @@
 body {
-    --spatiere-pagina: 60px;
+    --spatiere-pagina: 30px;
     --padding-sectiune: 10px;
     --grid-gap: 30px;
 
@@ -113,4 +113,6 @@ iframe {
     
 }
 
-
+#acasa-mediu {
+    display: none;
+}

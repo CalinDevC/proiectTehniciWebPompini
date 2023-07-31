@@ -4,8 +4,8 @@ html {
 
 
 body {
-    --spatiere-pagina: 10px;
-    --padding-sectiune: 5px;
+    --spatiere-pagina: 5px;
+    --padding-sectiune: 3px;
 
 }
 
@@ -24,6 +24,6 @@ body {
 }
 
 img {
-    width: 100%;
+
     max-width: 400px;
 }

@@ -29,6 +29,8 @@
     <link href="resources/css/tabel.css" rel="stylesheet" type="text/css" />
     <link href="resources/css/back-to-top.css" rel="stylesheet" type="text/css" />
     <link href="resources/css/nav.css" rel="stylesheet" type="text/css" />
+    <link href="resources/css/nav1000.css" rel="stylesheet" type="text/css"  media="screen and (max-width: 1000px)"/>
+    <link href="resources/css/nav700.css" rel="stylesheet" type="text/css"  media="screen and (max-width: 700px)"/>
    <!-- <link href="resources/css/reset.css" rel="stylesheet" type="text/css" />-->
 
 </head>
@@ -38,9 +40,17 @@
     </header>
 <!-- Meniul -->
     <nav>
+        <!--meniul hamburger-->
+        <label id="hamburger" for="ch-menu">
+            <img src="resources/img/Hamburger_icon_alb.png" alt="menu">
+        </label>
+        <input id="ch-menu" type="checkbox">
+
+        <!--meniul normal-->
         <ul class="meniu">
             <li>
-                <a href="index.html"><i class="fa-solid fa-house"></i> Acasa</a>
+                <div id="acasa"><a href="index.html"><i class="fa-solid fa-house"></i> Acasa</a></div>
+                <div id="acasa-mediu"><a href="index.html"><i class="fa-solid fa-house"></i></a></div>
                 <ul>
                     <li><a href="#link1">Link 1</a></li>
                     <li><a href="#link2">Link 2</a></li>

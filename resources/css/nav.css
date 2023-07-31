@@ -1,10 +1,14 @@
+#hamburger, #ch-menu {
+    display: none;
+}
+
 *{
     box-sizing: border-box;
 }
 body {
     --border-grosime:2px;
     --latime-buton: 200px;
-    --inaltime-nav:30px;
+    --inaltime-nav:50px;
     --spatiere-main:45px;
     --culoare-text-meniu:#F2DC6B;
     --culoare-meniu:#3BA7BF;
@@ -13,14 +17,12 @@ body {
 }
 
 nav {
-    margin: 0;
+    margin: calc(1*var(--spatiere-pagina));
     padding: 0;
     height: var(--inaltime-nav);
     background-color: var(--culoare-meniu);
     position: sticky;
     top: 0;
-    margin-right: calc(1*var(--spatiere-pagina));
-    margin-left: calc(1*var(--spatiere-pagina));
     z-index: 1;
 }
 
