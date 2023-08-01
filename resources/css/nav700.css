@@ -31,3 +31,7 @@ ul.meniu{
         transform: scale(1, 1);
     }
 }
+
+ul.meniu li ul li a:hover::before {
+    display: none;
+}

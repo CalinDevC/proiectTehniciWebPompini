@@ -8,3 +8,6 @@
 body{
         --latime-buton: 85px;
     }
+ul.meniu li ul li a:hover::before {
+    display: none;
+}
