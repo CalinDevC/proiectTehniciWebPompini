@@ -22,7 +22,7 @@
 #tabel th {
     border: 2px solid #ddd; /*aici am pus borderul >1px decat la td*/
     padding: 12px; /*am pus si paddingul mai mare la capete de coloana*/
-    background-color: #3BA7BF;
+    background-color: var(--main-color);
     color: white;
 }
 #tabel {

@@ -1,0 +1,84 @@
+@media print {
+
+    #absolut {
+        position: absolute;
+        display: inline-block;
+        top: 100%;
+        width: 20px;
+        height: 20px;
+        right: 0;
+        overflow: visible;
+    }
+
+    nav, iframe, figure, a.back-to-top-btn {
+        display: none;
+    }
+
+    #banner-print, #grid-pagina {
+        display: block;
+        background-color: white;
+    }
+
+    .link {
+        text-decoration: none;
+        color: var(--text-color);
+    }
+
+    header {
+        page-break-after: always;
+        padding-top: 50%;
+    }
+
+    header h1 {
+        text-align: center;
+        text-decoration: underline;
+        font-size: 2.5rem;
+    }
+
+    footer {
+        page-break-before: always;
+    }
+
+    #watermark {
+        display: block;
+        position: fixed;
+        bottom: 0;
+        right: 2rem;
+    }
+
+    #watermark::after {
+        color: var(--text-color);
+        display: block;
+        opacity: 0.65;
+        border: double var(--main-color);
+        font-size: 12px;
+        transform: scale(1, 0.754);
+        content: "Copyright @  Campean Calin";
+    }
+
+
+    #banner-print {
+        border: dotted black;
+        position: absolute;
+        text-align: center;
+        top: 0;
+        margin: 0 50px;
+        width: 80%;
+    }
+
+
+    @page {
+        size: A4 portrait;
+        counter-increment: page;
+    }
+
+    @page :left {
+        margin-left: 2.5cm;
+        margin-right: 0.5cm;
+    }
+
+    @page :right {
+        margin-left: 0.5cm;
+        margin-right: 2.5cm;
+    }
+}
