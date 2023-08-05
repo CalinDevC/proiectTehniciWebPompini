@@ -1,12 +1,25 @@
 {
-  "name": "untitled",
+  "name": "proiectpompinitw",
   "version": "1.0.0",
-  "description": "",
+  "description": "proiect scolar tehnici web site automatizari pompe",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "author": "Calin Campean",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CalinDevC/proiectTehniciWebPompini.git"
+  },
+  "bugs": {
+    "url": "https://github.com/CalinDevC/proiectTehniciWebPompini/issues"
+  },
+  "homepage": "https://github.com/CalinDevC/proiectTehniciWebPompini#readme"
 }

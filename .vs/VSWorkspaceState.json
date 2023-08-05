@@ -2,7 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\resources",
-    "\\resources\\css"
+    "\\resources\\views",
+    "\\resources\\views\\fragmente",
+    "\\resources\\views\\pagini"
   ],
+  "SelectedNode": "\\resources\\views\\pagini\\index.ejs",
   "PreviewInSolutionExplorer": false
 }
