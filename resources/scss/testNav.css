@@ -1,0 +1,112 @@
+@charset "UTF-8";
+#hamburger, #ch-menu {
+  display: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  --border-grosime:2px;
+  --latime-buton: 200px;
+  --inaltime-nav:50px;
+  --spatiere-main:45px;
+  --culoare-text-meniu:#F2DC6B;
+  --culoare-meniu:#3BA7BF;
+  --culoare-meniu-activ:#63E4F2;
+  margin: 0px;
+}
+
+nav {
+  margin: calc(1 * var(--spatiere-pagina));
+  padding: 0;
+  height: var(--inaltime-nav);
+  background-color: var(--culoare-meniu);
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+/*animatie sagetica urata (cer permisiunea sa o scot din site :)))*/
+ul.meniu li ul li a::before {
+  content: "→";
+  opacity: 0;
+  position: absolute; /*ca sa nu primeasca pozitie si sa fie legat de elementul superior in tree*/
+  left: 10px;
+}
+
+ul.meniu li ul li a:hover::before {
+  opacity: 1;
+  transform: translateX(100%);
+  transition: all 0.3s linear;
+}
+
+ul.meniu {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  animation-name: animatie_submeniu;
+  animation-fill-mode: forwards;
+  animation-duration: 0.3s;
+  animation-timing-function: linear;
+}
+ul.meniu li {
+  width: var(--latime-buton);
+  height: var(--inaltime-nav);
+  background-color: var(--culoare-meniu);
+  line-height: var(--inaltime-nav);
+  border: var(--border-grosime) solid var(--text-color);
+  box-sizing: border-box;
+  list-style-type: none; /*am scapat de bulleturi*/
+  color: var(--text-color);
+  text-align: center;
+  vertical-align: center;
+  transition: box-shadow 0.5s, linear, background-color 0.5s linear;
+}
+ul.meniu li:hover {
+  box-shadow: inset 0 0 10px var(--text-color);
+  background-color: var(--culoare-meniu-activ);
+}
+ul.meniu > li:hover ul {
+  display: block;
+  z-index: 100; /*acesta este ca sa vina primul, peste alte eleemnte*/
+  position: relative;
+}
+ul.meniu li div {
+  color: var(--text-color);
+  text-decoration: none; /*scap de underline*/
+  display: block; /*pentru a iintinde link pe tot butonul*/
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+}
+ul.meniu li a {
+  color: var(--text-color);
+  text-decoration: none; /*scap de underline*/
+  display: block; /*pentru a iintinde link pe tot butonul*/
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+}
+ul.meniu ul {
+  margin: 0;
+  padding: 0;
+  animation-name: animatie_submeniu;
+  animation-fill-mode: forwards;
+  animation-duration: 0.3s;
+  animation-timing-function: linear;
+  display: none; /*ascund submeniu*/
+  opacity: 0;
+  transform: scaleY(0);
+  transform-origin: 50% 0;
+}
+
+@keyframes animatie_submeniu {
+  100% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}
+
+/*# sourceMappingURL=testNav.css.map */
