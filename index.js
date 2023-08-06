@@ -17,7 +17,7 @@ app.set("view engine", "ejs");
 app.use("/resources", express.static(path.join(__dirname, "resources"))) ;
 
 app.get(["/", "/index", "/home"], function (req, res) {
-    res.render("pagini/index");
+    res.render("pagini/index", {ip:req.ip});
 });
 
 app.get("/paginatest", function (req, res) {

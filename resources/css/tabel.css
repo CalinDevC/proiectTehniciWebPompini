@@ -21,11 +21,12 @@
 
 #tabel th {
     border: 2px solid #ddd; /*aici am pus borderul >1px decat la td*/
-    padding: 12px; /*am pus si paddingul mai mare la capete de coloana*/
+    padding: 8px; /*am pus si paddingul mai mare la capete de coloana*/
     background-color: var(--main-color);
     color: white;
 }
 #tabel {
+    table-layout: fixed;
     border-collapse: collapse; /*sa nu fie spatiere intre borders*/
     width: 100%;
 
@@ -33,8 +34,11 @@
 
 #tabel td {
     border: 1px solid lightgrey;
-    padding: 0px 8px;
+    padding: 0px 5px;
     text-align: center;
+    overflow: auto;
+    white-space: nowrap;
+
 }
 
 #tabel tr:nth-child(even) {
@@ -52,9 +56,11 @@
 /* tranzitia de 3/4 secunde pentru rows la hover */
 #tabel tr {
     transition: background-color 0.75s, font-size 0.75s;
+
 }
 
 #tabel tr:hover {
+
     background-color: #f2f2f2;
 }
 
