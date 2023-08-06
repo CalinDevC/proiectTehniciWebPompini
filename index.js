@@ -24,6 +24,10 @@ app.get("/paginatest", function (req, res) {
     res.render("pagini/paginatest");
 });
 
+app.get("/preturi-montaj", function (req, res) {
+    res.render("pagini/preturi-montaj");
+});
+
 app.get("/ceva", function (req, res) {
     res.send("altceva");
 });
@@ -90,12 +94,15 @@ app.get ("/*", function (req, res) {
         // console.log("Eroare", err);
         // console.log("Rezultat randare", rezultatRandare);
         if(err) {
-            if(err.message.startsWith("Failed to lookup view"))
-            afisEroare(res, 404);
+            console.log("Eroare", err);
+            if (err.message.startsWith("Failed to lookup view")) {
+                afisEroare(res, 404);
+            } else
+                afisEroare(res);
         }
 
-        else{
-            res.send(rezultatRandare);
+    else{
+         res.send(rezultatRandare);
 
         }
     });
