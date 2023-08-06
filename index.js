@@ -10,6 +10,8 @@ obGlobal={
 
 app = express(); 
 console.log("Directorul curent:", __dirname);
+console.log("Fisierul curent:", __filename);
+console.log("Directorul de lucru:", process.cwd());
 app.set("view engine", "ejs");
 
 app.use("/resources", express.static(path.join(__dirname, "resources"))) ;
