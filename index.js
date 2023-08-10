@@ -12,9 +12,23 @@ app = express();
 console.log("Directorul curent:", __dirname);
 console.log("Fisierul curent:", __filename);
 console.log("Directorul de lucru:", process.cwd());
+
+vectGenFoldere=["temp", "temp1", "backup", "poze_upload"];
+for (let folder of vectGenFoldere) {
+    let cale=path.join(__dirname, folder);
+    if (!fs.existsSync(cale)) {
+        fs.mkdirSync(cale);
+    }
+}
+
+
 app.set("view engine", "ejs");
 
 app.use("/resources", express.static(path.join(__dirname, "resources"))) ;
+
+app.get("/favicon.ico", function(req, res){
+    res.sendFile(path.join(__dirname, "resources/ico/favicon.ico"))
+})
 
 app.get(["/", "/index", "/home"], function (req, res) {
     res.render("pagini/index", {ip:req.ip});
@@ -85,7 +99,9 @@ function afisEroare(res, _indentificator=-1, _titlu, _text, _imagine){
 
 }
 
-
+app.get("/*.ejs", function (req, res){
+    afisEroare(res,400)
+})
 
 //pentru toate paginile, verific daca esxista
 app.get ("/*", function (req, res) {

@@ -25,7 +25,7 @@
             "identificator":400,
             "status":true,
             "titlu":"400 - Bad request",
-            "text": "Ruta incorecta!",
+            "text": "Ruta complet incorecta!",
             "imagine":"interzis.png"
         },       
         {

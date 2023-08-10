@@ -7,7 +7,14 @@ body {
     --spatiere-pagina: 30px;
     --padding-sectiune: 10px;
     --grid-gap: 30px;
+
+
 }
+
+#normal {
+    padding: var(--padding-sectiune);
+}
+
 
 #grid-pagina {
     display: grid;
@@ -41,7 +48,7 @@ body {
 }
 
 #grid-pagina iframe {
-   max-width: 100%;
+  /* max-width: 100%;*/
 }
 
 #banner {
@@ -75,13 +82,30 @@ body {
     grid-area: z-diverse;
 }
 
+/* Stilurile pentru linkurile vizitate */
+a:visited {
+    color: var(--text-color);
+}
+
+/* stilurile pentru linkurile externe (doar sagetica nu linkul in sine)*/
+
+a[href^="http"]::before {
+    content: "\2BB3"; /* simbolul sageticii */
+    font-size: 150%; /* font-size cu 50% mai mare  */
+}
+
+a[href^="http"]:hover::before {
+    color: red; /* modific culoarea simbolului la hover */
+}
+
+
 
 /* div pentru linkurile video cu flexbox */
 .video-links {
     display: flex;
     justify-content: center;
-    gap: 10px; /* spatiu intre linkuri */
-    margin-bottom: -5px; /* SPATIU INTRE LINKURI SI IFRAME
+    gap: 1em; /* spatiu intre linkuri */
+    margin-bottom: -3px; /* SPATIU INTRE LINKURI SI IFRAME
      mi-a luat CEVA sa-mi dau seama cum unesc :)) */
 }
 
@@ -98,7 +122,7 @@ body {
 
 /*  glow la hover */
 .video-links a:hover {
-    background-color: #e6f7ff;
+    background-color: var(--buton-back-color);
     border-color: #3BA7BF;
     box-shadow: 0 0 10px #3BA7BF;
 
@@ -108,9 +132,10 @@ body {
 iframe {
     display: block;
     margin: 0 auto; /* am centrat orizontal iframeul*/
-    width: 57%;
+    width: 80%;
     max-width: 800px;
     min-width: 200px;
+    border-radius: 2%;
     
 }
 
