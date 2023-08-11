@@ -197,5 +197,10 @@ img.poster {
     filter: blur(1px);
 }
 
+h3::selection {
+    color: var(--complementary-color);
+    background-color: var(--highlight-color);
+}
+
 
 
