@@ -165,4 +165,37 @@ img.poster {
     max-height: 100%;
 }
 
+#columns {
+    column-count: 3;
+    column-rule-style: solid;
+}
+@media screen and (max-width: 1000px) {
+    #columns {
+        column-count: 1;
+    }
+}
+
+#h2original {
+
+    position:relative;
+
+}
+#h2reflexie {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    transform-origin: 0 0;
+    /* ransform  reflexia */
+    transform: rotateX(180deg) skew(-45deg) scaleY(0.4) translate(10px, -25px);
+    opacity: 0.55;
+    transition: transform 0.5s, filter 0.5s, opacity 0.5s;
+    filter: blur(1px); /*  efectul de blur la reflexie */
+}
+#h2reflexie:hover {
+    transform: rotateX(180deg) skew(-45deg) scaleY(1.2) translate(10px, -40px); /* lungesc reflexia */
+    opacity: 0.55;
+    filter: blur(1px);
+}
+
+
 
