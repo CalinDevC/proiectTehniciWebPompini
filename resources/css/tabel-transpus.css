@@ -1,0 +1,32 @@
+/*#tabel-transpus thead,tbody,tr {
+    display: block;
+    float: left;
+}
+#tabel-transpus th, td {
+    display: block;
+    border:1px solid black;
+    padding:0.3em;
+}
+#tabel-transpus td+td, #tabel-transpus th+th {
+    border-top:none;
+}*/
+/*in modul de mai sus, imi lua tbody, tr, th, etc din toate tabrlele*/
+/*m-am chinuit ceva pana sa ma prind*/
+
+#tabel-preturi, #servicii{
+    margin: 20px 40px;
+}
+
+#tabel-transpus thead, #tabel-transpus tbody, #tabel-transpus tr {
+    display: block;
+    float: left;
+}
+#tabel-transpus th, #tabel-transpus td {
+    display: block;
+    border:1px solid black;
+    padding:0.3em;
+}
+#tabel-transpus td+td, #tabel-transpus th+th {
+    border-top:none;
+}
+
