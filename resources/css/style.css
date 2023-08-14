@@ -202,5 +202,13 @@ h3::selection {
     background-color: var(--highlight-color);
 }
 
+/* stil pt  tag hr */
+hr {
+    height: 0.65rem;
+    width: 50%;
+    background: linear-gradient( #3BA7BF, #d9f1fd, #3BA7BF, #d9f1fd, #3BA7BF, #d9f1fd); /* Gradient liniar între roșu și albastru */
+    border-radius: 10px;
+    margin: 10px 10px; /* pt spatierea in pagina */
+}
 
 
