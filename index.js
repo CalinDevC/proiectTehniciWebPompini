@@ -2,6 +2,7 @@ const express = require('express');
 const path = require("path");
 const fs = require("fs");
 const {response} = require("express"); // creez, citesc, verific un fisier
+const sharp = require("sharp"); // modulul redimensionare imagini
 
 //conventie notare variabila globala
 obGlobal={
@@ -31,7 +32,7 @@ app.get("/favicon.ico", function(req, res){
 })
 
 app.get(["/", "/index", "/home"], function (req, res) {
-    res.render("pagini/index", {ip:req.ip});
+    res.render("pagini/index", {ip:req.ip, img: obGlobal.obImagini.imagini});
 });
 
 app.get("/paginatest", function (req, res) {
@@ -123,6 +124,78 @@ app.get ("/*", function (req, res) {
         }
     });
 });
+
+
+/*----------sectiune intitializare si afisare Galerie --------------------*/
+function initImagini(){
+    var continut= fs.readFileSync(__dirname+"/resources/json/galerie.json").toString("utf-8");
+
+    obGlobal.obImagini=JSON.parse(continut);
+    let vImagini=obGlobal.obImagini.imagini;
+
+    let caleAbs=path.join(__dirname,obGlobal.obImagini.cale_galerie);
+    let caleAbsMediu=path.join(__dirname,obGlobal.obImagini.cale_galerie, "mediu");
+   /* let caleAbsMic=path.join(__dirname,obGlobal.obImagini.cale_galerie, "mic");*/
+    if (!fs.existsSync(caleAbsMediu))
+        fs.mkdirSync(caleAbsMediu);
+
+
+    for (let imag of vImagini){
+        [numeFis, ext]=imag.cale_imagine.split(".");
+        let caleFisAbs=path.join(caleAbs,imag.cale_imagine);
+        let caleFisMediuAbs=path.join(caleAbsMediu, numeFis+".webp");
+        sharp(caleFisAbs).resize(300).toFile(caleFisMediuAbs);
+        imag.cale_imagine_mediu=path.join("/", obGlobal.obImagini.cale_galerie, "mediu",numeFis+".webp" )
+        imag.cale_imagine=path.join("/", obGlobal.obImagini.cale_galerie, imag.cale_imagine )
+        //eroare.imagine="/"+obGlobal.obErori.cale_baza+"/"+eroare.imagine;
+
+
+    }
+
+
+   /* if (!fs.existsSync(caleAbsMic))
+        fs.mkdirSync(caleAbsMic);
+
+
+    for (let imag of vImagini){
+        [numeFis, ext]=imag.cale_imagine.split(".");
+        let caleFisAbs=path.join(caleAbs,imag.cale_imagine);
+        let caleFisMicAbs=path.join(caleAbsMic, numeFis+".webp");
+        sharp(caleFisAbs).resize(200).toFile(caleFisMicAbs);
+        imag.cale_imagine_mediu=path.join("/", obGlobal.obImagini.cale_galerie, "mic",numeFis+".webp" )
+        imag.cale_imagine=path.join("/", obGlobal.obImagini.cale_galerie, imag.cale_imagine )
+        //eroare.imagine="/"+obGlobal.obErori.cale_baza+"/"+eroare.imagine;
+
+
+    }
+
+      d=new Date();
+     console.log(d.getHours,"   ",d.getMinutes);
+     var timeFiltered = vImagini.filter(function(imgg){
+
+         return (d.getHours()>Number(imgg.timp.substr(0,2)) && d.getHours()<Number(imgg.timp.substr(6,2)))    ||
+             (d.getHours()==Number(imgg.timp.substr(0,2)) && d.getHours()<Number(imgg.timp.substr(6,2)) && d.getMinutes()>=Number(imgg.timp.substr(3,2)))   ||
+             (d.getHours()==Number(imgg.timp.substr(6,2)) && d.getHours()>Number(imgg.timp.substr(0,2)) && d.getMinutes()<=Number(imgg.timp.substr(9,2)))
+     })
+
+    for(let imgg of timeFiltered)
+         console.log("CALE IMAGINE:   "+imgg.cale_imagine+"\n");
+     console.log("img in filtru ^^\n");
+     obGlobal.obImaginiFiltered=JSON.parse(JSON.stringify(obGlobal.obImagini));
+     obGlobal.obImaginiFiltered.imagini=timeFiltered;
+
+     for(let imgg of obGlobal.obImaginiFiltered.imagini)
+         console.log("CALE IMAGINE:   "+imgg.cale_imagine+"\n");
+     console.log("img filtrate ^^\n");
+     for(let imgg of obGlobal.obImagini.imagini)
+         console.log("CALE IMAGINE:   "+imgg.cale_imagine+"\n");
+
+     console.log("\n"+obGlobal.obImagini.cale_galerie+"\n\n");
+
+    */
+}
+initImagini();
+
 
 app.listen(8080);
 console.log("Aplicatia a pornit");  

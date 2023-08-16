@@ -25,12 +25,13 @@ body {
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas: "z-banner z-banner z-banner"
                         "z-tabel z-evenimente z-evenimente"
-                        "z-tabel z-anunturi z-anunturi"
-                        "z-utilizatori-online z-statistici z-server"
+                        "z-tabel z-galerie-statica z-galerie-statica"
+                        "z-utilizatori-online z-linkuri-video z-server"
                         "z-diverse z-diverse z-diverse";
 
 
 }
+
 
 #grid-pagina > * {
     outline: 1px solid var(--main-color);
@@ -63,16 +64,16 @@ body {
     grid-area: z-evenimente;
 }
 
-#anunturi {
-    grid-area: z-anunturi;
+#linkuri-video {
+    grid-area: z-linkuri-video;
 }
 
 #utilizatori-online {
     grid-area: z-utilizatori-online;
 }
 
-#statistici {
-    grid-area: z-statistici;
+#galerie-statica {
+    grid-area: z-galerie-statica;
 }
 #server {
     grid-area: z-server;
@@ -102,6 +103,7 @@ a[href^="http"]:hover::before {
 
 /* div pentru linkurile video cu flexbox */
 .video-links {
+
     display: flex;
     justify-content: center;
     gap: 1em; /* spatiu intre linkuri */
@@ -110,8 +112,15 @@ a[href^="http"]:hover::before {
 }
 
 /* style linkuri video */
+.video-links a[href^="http"]::before {
+content: none;
+} /*aici am scos sagetica special pentru linkurile video...*/
+
 .video-links a {
-    padding: 8px 12px;
+
+    width: 21%;
+    justify-content: center;/*nu merge deoarece este intr-un display:block*/
+    padding: 0rem 0.5rem;
     color: var(--main-color);
     text-decoration: none;
     font-weight: bold;

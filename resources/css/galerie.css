@@ -1,0 +1,72 @@
+#galerie-statica {
+    padding-left: var(--padding-sectiune);
+    padding-right: var(--padding-sectiune);
+}
+
+#grid-galerie {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-row-gap: 0.5em;
+    grid-column-gap: 0.5em;
+    counter-reset: nrimag 0;
+    grid-template-areas: "g1 g2 g3 g4" "g5  . .  g6" "g7 g8 g9 g10";
+}
+#grid-galerie figure {
+    display: none;
+}
+#grid-galerie figure:nth-child(1) {
+    display: block;
+    grid-area: g1;
+}
+#grid-galerie figure:nth-child(2) {
+    display: block;
+    grid-area: g2;
+}
+#grid-galerie figure:nth-child(3) {
+    display: block;
+    grid-area: g3;
+}
+#grid-galerie figure:nth-child(4) {
+    display: block;
+    grid-area: g4;
+}
+#grid-galerie figure:nth-child(5) {
+    display: block;
+    grid-area: g5;
+}
+#grid-galerie figure:nth-child(6) {
+    display: block;
+    grid-area: g6;
+}
+#grid-galerie figure:nth-child(7) {
+    display: block;
+    grid-area: g7;
+}
+#grid-galerie figure:nth-child(8) {
+    display: block;
+    grid-area: g8;
+}
+#grid-galerie figure:nth-child(9) {
+    display: block;
+    grid-area: g9;
+}
+#grid-galerie figure:nth-child(10) {
+    display: block;
+    grid-area: g10;
+}
+#grid-galerie img {
+    width: 100%;
+    transition: all 1.25s linear;
+}
+#grid-galerie img:hover {
+    translate: 0px -15%;
+    transform: scale(130%);
+}
+#grid-galerie figcaption {
+    text-align: center;
+    counter-increment: nrimag 1;
+}
+#grid-galerie figcaption::before {
+    content: counter(nrimag, lower-alpha) ")";
+}
+

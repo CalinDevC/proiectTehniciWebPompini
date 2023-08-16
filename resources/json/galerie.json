@@ -1,0 +1,92 @@
+{
+  "cale_galerie":"resources/img/galerie",
+  "imagini": [
+
+    {
+      "cale_imagine":"boreas-500x500.jpg",
+      "titlu":"Boreas",
+      "descriere":"presostat electronic Boreas",
+      "timp":"00:00-11:00"
+    },
+    {
+      "cale_imagine":"brio-500x500.jpg",
+      "titlu":"Brio",
+      "descriere":"presostat electronic Brio",
+      "timp":"00:00-11:00"
+    },
+    {
+      "cale_imagine":"bosforus-500x500.jpg",
+      "titlu":"Bosforus",
+      "descriere":"presostat electronic Bosforus",
+      "timp":"00:00-11:00"
+    },
+    {
+      "cale_imagine":"brio-tank-500x500.jpg",
+      "titlu":"Brio Tank",
+      "descriere":"presostat electronic Brio Tank",
+      "timp":"00:00-11:00"
+    },
+    {
+      "cale_imagine":"brio-top-500x500.jpg",
+      "titlu":"BRIO Top",
+      "descriere":"presostat electronic Brio Top",
+      "timp":"00:00-11:00"
+    },
+    {
+      "cale_imagine":"easypress-500x500.jpg",
+      "titlu":"EasyPress",
+      "descriere":"presostat electronic EasyPress",
+      "timp":"00:00-11:00"
+    },
+    {
+      "cale_imagine":"epower-500x500.jpg",
+      "titlu":"Epower",
+      "descriere":"Convertizor de frecventa Epower",
+      "timp":"00:00-11:00"
+    },
+    {
+      "cale_imagine":"hydrocontroller-500x500.jpg",
+      "titlu":"Hydrocontroller",
+      "descriere":"Convertizor de frecventa Hydrocontroller",
+      "timp":"00:00-11:00"
+    },
+    {
+      "cale_imagine":"nettuno-500x500.jpg",
+      "titlu":"Nettuno",
+      "descriere":"Convertizor de frecventa Nettuno",
+      "timp":"00:00-11:00"
+    },
+    {
+      "cale_imagine":"pc15-500x500.jpg",
+      "titlu":"Pc15",
+      "descriere":"presostat electronic Pc15",
+      "timp":"00:00-11:00"
+    },
+    {
+      "cale_imagine":"presSystem-500x500.jpg",
+      "titlu":"PresSystem",
+      "descriere":"presostat electronic PresSystem",
+      "timp":"00:00-11:00"
+    },
+    {
+      "cale_imagine":"simplex-500x500.jpg",
+      "titlu":"Super Simplex",
+      "descriere":"presostat electronic Super Simplex",
+      "timp":"00:00-11:00"
+    },
+    {
+      "cale_imagine":"sirio-500x500.jpg",
+      "titlu":"Sirio",
+      "descriere":"Variator de turatie Sirio",
+      "timp":"00:00-11:00"
+    },
+    {
+      "cale_imagine":"sirioxp-500x500.jpg",
+      "titlu":"Sirio XP",
+      "descriere":"Variator de turatie Sirio XP",
+      "timp":"00:00-11:00"
+    }
+
+
+  ]
+}

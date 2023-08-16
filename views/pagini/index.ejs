@@ -100,6 +100,8 @@
                 </tfoot>
             </table>
 
+
+
     </section>
 
 
@@ -129,8 +131,8 @@
                 <p> Zona 3 este pentru calendarul de evenimente. Veți pune un placeholder.</p>
             </section>
 
-            <section id="anunturi">
-                <h2>Zona 4 - Prezentare echipamente</h2>
+            <section id="linkuri-video">
+                <h2>Zona 6 - Prezentare echipamente</h2>
                 <article>
                     <h3>Prezentare echipamente</h3>
                     <p>Dacă doriți să montati singuri automatizarea, desi nu este recomandat, <strong>mai intai informati-va!</strong></p>
@@ -138,7 +140,7 @@
                     <div class="video-links">
                         <a href="https://www.youtube.com/embed/gWGehQOVBEs" target="ifr-video">Prima instalare</a>
                         <a href="https://www.youtube.com/embed/mYm7SA237-k" target="ifr-video">Meniul avansat</a>
-                        <a href="https://www.youtube.com/embed/pAvXmxwIWPk" target="ifr-video">Conexiuni hidraulice</a>
+                        <a href="https://www.youtube.com/embed/pAvXmxwIWPk" target="ifr-video"><span></span>Legaturi electrice</a>
                     </div>
 
                     <iframe name="ifr-video" width="560" height="315" src="https://www.youtube.com/embed/gWGehQOVBEs"
@@ -146,11 +148,8 @@
                 </article>
 
 
-                <p> Zona 4 este pentru anunțuri. Veți pune un placeholder.</p>
-                <p> Zona 4 este pentru anunțuri. Veți pune un placeholder.</p>
-                <p> Zona 4 este pentru anunțuri. Veți pune un placeholder.</p>
-                <p> Zona 4 este pentru anunțuri. Veți pune un placeholder.</p>
-                <p> Zona 4 este pentru anunțuri. Veți pune un placeholder.</p>
+                <p> Zona 6 este pentru linkuri video. Veți pune un placeholder.</p>
+
             </section>
 
             <section id="utilizatori-online">
@@ -164,8 +163,21 @@
                 <p> Zona 5 este pentru lista de utilizatori online. Placeholder.</p>
             </section>
 
-            <section id="statistici">
-                <h2>Zona 6 - Placeholder</h2>
+            <section id="galerie-statica">
+                <h2>Zona 6 - Galerie</h2>
+                <div id="grid-galerie">
+                    <%for (let imag of locals.img) {%>
+                    <figure>
+                        <picture>
+                            <source srcset="<%- imag.cale_imagine_mediu.replace(/\\/g, '/') %>" media="(max-width:1000px)"/>
+                            <img src="<%- imag.cale_imagine%>">
+
+                        </picture>
+
+                        <figcaption><%- imag.descriere %></figcaption>
+                    </figure>
+                    <% } %>
+                </div>
 
                 <p> Zona 6 este pentru date despre utilizator și statistici. Placeholder.</p>
                 <p> Zona 6 este pentru date despre utilizator și statistici. Placeholder.</p>
