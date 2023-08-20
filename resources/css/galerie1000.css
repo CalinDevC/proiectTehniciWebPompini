@@ -71,7 +71,9 @@
 
 }
 #grid-galerie figcaption {
-    text-align: left;
+    padding: 0.5rem;
+    margin-top: 1rem;
+    width: 50%;
     counter-increment: nrimag 1;
 }
 #grid-galerie figcaption::before {
@@ -80,6 +82,6 @@
 #grid-galerie figure:hover figcaption {
     background-color: var(--main-color); /* Schimbă culoarea de fundal */
     color: var(--background-color); /* Schimbă culoarea fontului */
-    border-radius: 2rem;
+    border-radius: 1rem;
 }
 

@@ -16,6 +16,7 @@
 }
 #grid-galerie figure {
     display: none;
+
 }
 #grid-galerie figure:nth-child(1) {
     display: block;
@@ -60,7 +61,7 @@
 
 #grid-galerie img {
     margin-top: 1rem;
-    width: 70%;
+    width: 80%;
     transition: all 1.25s linear;
     border-radius: 1rem;
     box-shadow: 0rem 0rem 1rem var(--grey-shadow);
@@ -74,8 +75,10 @@
 
 }
 #grid-galerie figcaption {
-    text-align: left;
-    padding: 1rem 0rem;
+
+    padding: 0.5rem;
+    margin-top: 1rem;
+    width: 80%;
     counter-increment: nrimag 1;
 }
 #grid-galerie figcaption::before {
@@ -86,5 +89,6 @@
     background-color: var(--main-color); /* schimb culoarea de fundal */
     color: var(--background-color); /* schimb culoarea fontului */
     border-radius: 1rem;
+    box-shadow: 0.5rem 0.8rem 1.5rem var(--grey-shadow);
 }
 
