@@ -61,7 +61,7 @@
 }
 
 #grid-galerie img {
-    padding-top: 2rem;
+    margin-top: 1rem;
     width: 50%;
     transition: all 1.25s linear;
 }

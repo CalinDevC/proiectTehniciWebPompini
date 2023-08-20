@@ -11,7 +11,7 @@ body {
     --complementary-color:#F2DC6B;
     --gradient-body: linear-gradient(transparent, #04d99d 30%, #04d99d 50%, #04d99d 70%, transparent);
     --padding-text: 5px 10px;
-
+    --grey-shadow: grey;
     background-color: var(--background-color);
     color: var(--text-color);
 
