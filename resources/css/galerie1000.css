@@ -6,13 +6,15 @@
 
 #grid-galerie {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-row-gap: 0.5em;
     grid-column-gap: 0.5em;
     counter-reset: nrimag 0;
-    grid-template-areas:    "g1 g2 g3 g4"
-                            "g5  . .  g6"
-                            "g7 g8 g9 g10";
+    grid-template-areas:    "g1 g2"
+                            "g3 g4"
+                            "g5 g6"
+                            "g7 g8"
+                            "g9 g10";
 }
 #grid-galerie figure {
     display: none;
@@ -60,7 +62,7 @@
 
 #grid-galerie img {
     padding-top: 2rem;
-    width: 80%;
+    width: 50%;
     transition: all 1.25s linear;
 }
 #grid-galerie img:hover {
@@ -69,15 +71,15 @@
 
 }
 #grid-galerie figcaption {
-    text-align: center;
+    text-align: left;
     counter-increment: nrimag 1;
 }
 #grid-galerie figcaption::before {
     content: counter(nrimag, lower-alpha) ")";
 }
-
 #grid-galerie figure:hover figcaption {
     background-color: var(--main-color); /* Schimbă culoarea de fundal */
     color: var(--background-color); /* Schimbă culoarea fontului */
-    border-radius: 1rem;
+    border-radius: 2rem;
 }
+

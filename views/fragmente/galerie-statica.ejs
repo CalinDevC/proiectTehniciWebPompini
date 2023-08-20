@@ -1,0 +1,46 @@
+<section id="galerie-statica">
+    <h2>Galerie</h2>
+    <div id="grid-galerie">
+        <%
+        let prezent = new Date();
+        let oraCurenta = prezent.getHours();
+        let minutulCurent = prezent.getMinutes();
+        console.log(oraCurenta);
+        console.log(minutulCurent);
+        let afisate = 0; // counterul de imagini afisate
+
+                for (let imag of img) {
+            const intervalTimp = imag.timp.split("-");
+
+            const inceputInterval = intervalTimp[0];
+            const sfarsitInterval = intervalTimp[1];
+
+            const [h1, m1] = inceputInterval.split(":").map(Number);
+            const [h2, m2] = sfarsitInterval.split(":").map(Number);
+        //acum vreau daca imaginile afisate <10 si mai sunt imagini
+        //ce corespund intervalului de timp, sa le afiseze
+        if (afisate < 10) {
+        if (h1 * 60 + m1 <= oraCurenta * 60 + minutulCurent /*&& oraCurenta * 60 + minutulCurent*/ <= h2 * 60 + m2) {
+        %>
+            <figure>
+                <img src="<%= imag.cale_imagine %>"  alt="<%= imag.title %>" title="<%= imag.titlu %>">
+                <figcaption><%= imag.descriere %></figcaption>
+            </figure>
+        <%
+            afisate++;
+            console.log(afisate)
+        }  else { //daca afisate < 10 si nu mai sunt imagini care coresound intervalului de timp
+                  //sa imi arate imaginea cu lupa de am folosit-o si la eroare
+                    //dar imi arata numai ce vrea el
+        %>
+            <figure>
+                <img src="/resources/img/erori/lupa.png" alt="Imagine lipsa" title="Imagine lipsa">
+                <figcaption>Imagine lipsă</figcaption>
+            </figure>
+        <%
+        }
+        }
+        }
+        %>
+    </div>
+</section>

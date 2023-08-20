@@ -1,0 +1,35 @@
+#galerie-statica {
+    padding-top: var(--padding-galerie);
+    padding-left: var(--padding-sectiune);
+    padding-right: var(--padding-sectiune);
+}
+
+#grid-galerie {
+    display: block;
+
+}
+
+
+#grid-galerie img {
+    padding-top: 3rem;
+    width: 30%;
+    transition: all 1.25s linear;
+}
+#grid-galerie img:hover {
+    translate: 0px -10%;
+    transform: scale(125%);
+
+}
+#grid-galerie figcaption {
+    text-align: justify;
+    counter-increment: nrimag 1;
+}
+#grid-galerie figcaption::before {
+    content: counter(nrimag, lower-alpha) ")";
+}
+
+#grid-galerie figure:hover figcaption {
+    background-color: var(--main-color); /* Schimbă culoarea de fundal */
+    color: var(--background-color); /* Schimbă culoarea fontului */
+    border-radius: 2rem;
+}

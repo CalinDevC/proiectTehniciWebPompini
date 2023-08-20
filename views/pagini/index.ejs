@@ -163,21 +163,9 @@
                 <p> Zona 5 este pentru lista de utilizatori online. Placeholder.</p>
             </section>
 
-            <section id="galerie-statica">
-                <h2>Zona 6 - Galerie</h2>
-                <div id="grid-galerie">
-                    <%for (let imag of locals.img) {%>
-                    <figure>
-                        <picture>
-                            <source srcset="<%- imag.cale_imagine_mediu.replace(/\\/g, '/') %>" media="(max-width:1000px)"/>
-                            <img src="<%- imag.cale_imagine%>">
+            <section id="statistici">
+                <h2>Zona 6 - Statistici</h2>
 
-                        </picture>
-
-                        <figcaption><%- imag.descriere %></figcaption>
-                    </figure>
-                    <% } %>
-                </div>
 
                 <p> Zona 6 este pentru date despre utilizator și statistici. Placeholder.</p>
                 <p> Zona 6 este pentru date despre utilizator și statistici. Placeholder.</p>
@@ -232,9 +220,11 @@
 
                 </article>
 
+                <hr>
 
+                <%- include("../fragmente/galerie-statica.ejs") %>
 
-
+                <hr>
 
                 <section id="promotii">
                 <div id="h2original">

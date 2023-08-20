@@ -43,6 +43,10 @@ app.get("/preturi-montaj", function (req, res) {
     res.render("pagini/preturi-montaj");
 });
 
+app.get(["/galerie-statica"], function (req, res) {
+    res.render("pagini/galerie-statica", {img: obGlobal.obImagini.imagini});
+});
+
 app.get("/ceva", function (req, res) {
     res.send("altceva");
 });
@@ -165,34 +169,12 @@ function initImagini(){
         imag.cale_imagine_mediu=path.join("/", obGlobal.obImagini.cale_galerie, "mic",numeFis+".webp" )
         imag.cale_imagine=path.join("/", obGlobal.obImagini.cale_galerie, imag.cale_imagine )
         //eroare.imagine="/"+obGlobal.obErori.cale_baza+"/"+eroare.imagine;
+}
+*/
 
 
-    }
 
-      d=new Date();
-     console.log(d.getHours,"   ",d.getMinutes);
-     var timeFiltered = vImagini.filter(function(imgg){
 
-         return (d.getHours()>Number(imgg.timp.substr(0,2)) && d.getHours()<Number(imgg.timp.substr(6,2)))    ||
-             (d.getHours()==Number(imgg.timp.substr(0,2)) && d.getHours()<Number(imgg.timp.substr(6,2)) && d.getMinutes()>=Number(imgg.timp.substr(3,2)))   ||
-             (d.getHours()==Number(imgg.timp.substr(6,2)) && d.getHours()>Number(imgg.timp.substr(0,2)) && d.getMinutes()<=Number(imgg.timp.substr(9,2)))
-     })
-
-    for(let imgg of timeFiltered)
-         console.log("CALE IMAGINE:   "+imgg.cale_imagine+"\n");
-     console.log("img in filtru ^^\n");
-     obGlobal.obImaginiFiltered=JSON.parse(JSON.stringify(obGlobal.obImagini));
-     obGlobal.obImaginiFiltered.imagini=timeFiltered;
-
-     for(let imgg of obGlobal.obImaginiFiltered.imagini)
-         console.log("CALE IMAGINE:   "+imgg.cale_imagine+"\n");
-     console.log("img filtrate ^^\n");
-     for(let imgg of obGlobal.obImagini.imagini)
-         console.log("CALE IMAGINE:   "+imgg.cale_imagine+"\n");
-
-     console.log("\n"+obGlobal.obImagini.cale_galerie+"\n\n");
-
-    */
 }
 initImagini();
 

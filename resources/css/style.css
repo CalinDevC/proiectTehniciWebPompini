@@ -6,6 +6,7 @@ html {
 body {
     --spatiere-pagina: 30px;
     --padding-sectiune: 10px;
+    --padding-galerie: 20px;
     --grid-gap: 30px;
 
 
@@ -25,8 +26,8 @@ body {
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas: "z-banner z-banner z-banner"
                         "z-tabel z-evenimente z-evenimente"
-                        "z-tabel z-galerie-statica z-galerie-statica"
-                        "z-utilizatori-online z-linkuri-video z-server"
+                        "z-tabel z-linkuri-video z-linkuri-video"
+                        "z-utilizatori-online z-statistici z-server"
                         "z-diverse z-diverse z-diverse";
 
 
@@ -72,8 +73,8 @@ body {
     grid-area: z-utilizatori-online;
 }
 
-#galerie-statica {
-    grid-area: z-galerie-statica;
+#statistici {
+    grid-area: z-statistici;
 }
 #server {
     grid-area: z-server;
@@ -214,7 +215,7 @@ h3::selection {
 /* stil pt  tag hr */
 hr {
     height: 0.65rem;
-    width: 50%;
+    width: 90%;
     background: linear-gradient( #3BA7BF, #d9f1fd, #3BA7BF, #d9f1fd, #3BA7BF, #d9f1fd); /* Gradient liniar între roșu și albastru */
     border-radius: 10px;
     margin: 10px 10px; /* pt spatierea in pagina */
