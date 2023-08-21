@@ -25,7 +25,17 @@ for (let folder of vectGenFoldere) {
 
 app.set("view engine", "ejs");
 
-app.use("/resources", express.static(path.join(__dirname, "resources"))) ;
+app.use("/resources", express.static(path.join(__dirname, "resources")));
+//app.use(/^\/resources(\/[a-zA-Z0-9]*)*/g, function(req, res) // folosita in curs
+//la /resources/... da eroare 404 - gresit
+//la /resources/.../ da eroare 403 - corect
+
+app.use(/^\/resources(\/[a-zA-Z0-9]*)*$/,function (req,res) {
+
+    afisEroare(res,403);
+
+})
+
 
 app.get("/favicon.ico", function(req, res){
     res.sendFile(path.join(__dirname, "resources/ico/favicon.ico"))
@@ -110,23 +120,32 @@ app.get("/*.ejs", function (req, res){
 
 //pentru toate paginile, verific daca esxista
 app.get ("/*", function (req, res) {
+    try {
+        res.render("pagini" + req.url, function (err, rezultatRandare) {
+            // console.log("Eroare", err);
+            // console.log("Rezultat randare", rezultatRandare);
+            if (err) {
+                console.log("Eroare", err);
+                if (err.message.startsWith("Failed to lookup view")) {
+                    afisEroare(res, 404);
+                } else
+                    afisEroare(res);
+            } else {
+                res.send(rezultatRandare);
 
-    res.render("pagini" + req.url, function(err, rezultatRandare){
-        // console.log("Eroare", err);
-        // console.log("Rezultat randare", rezultatRandare);
-        if(err) {
+            }
+        });
+    }
+    catch (err) {
+
             console.log("Eroare", err);
-            if (err.message.startsWith("Failed to lookup view")) {
+            if (err.message.startsWith("Cannot find module")) {
+                console.log("eroare fisier resursa negasit")
                 afisEroare(res, 404);
             } else
                 afisEroare(res);
-        }
 
-    else{
-         res.send(rezultatRandare);
-
-        }
-    });
+    }
 });
 
 
@@ -139,9 +158,11 @@ function initImagini(){
 
     let caleAbs=path.join(__dirname,obGlobal.obImagini.cale_galerie);
     let caleAbsMediu=path.join(__dirname,obGlobal.obImagini.cale_galerie, "mediu");
-   /* let caleAbsMic=path.join(__dirname,obGlobal.obImagini.cale_galerie, "mic");*/
+    let caleAbsMic=path.join(__dirname,obGlobal.obImagini.cale_galerie, "mic");
     if (!fs.existsSync(caleAbsMediu))
         fs.mkdirSync(caleAbsMediu);
+    if (!fs.existsSync(caleAbsMic))
+        fs.mkdirSync(caleAbsMic);
 
 
     for (let imag of vImagini){
@@ -150,6 +171,9 @@ function initImagini(){
         let caleFisMediuAbs=path.join(caleAbsMediu, numeFis+".webp");
         sharp(caleFisAbs).resize(300).toFile(caleFisMediuAbs);
         imag.cale_imagine_mediu=path.join("/", obGlobal.obImagini.cale_galerie, "mediu",numeFis+".webp" )
+        let caleFisMicAbs=path.join(caleAbsMic, numeFis+".webp");
+        sharp(caleFisAbs).resize(200).toFile(caleFisMicAbs);
+        imag.fisier_mic=path.join("/", obGlobal.obImagini.cale_galerie, "mic",numeFis+".webp" )
         imag.cale_imagine=path.join("/", obGlobal.obImagini.cale_galerie, imag.cale_imagine )
         //eroare.imagine="/"+obGlobal.obErori.cale_baza+"/"+eroare.imagine;
 
@@ -157,20 +181,6 @@ function initImagini(){
     }
 
 
-   /* if (!fs.existsSync(caleAbsMic))
-        fs.mkdirSync(caleAbsMic);
-
-
-    for (let imag of vImagini){
-        [numeFis, ext]=imag.cale_imagine.split(".");
-        let caleFisAbs=path.join(caleAbs,imag.cale_imagine);
-        let caleFisMicAbs=path.join(caleAbsMic, numeFis+".webp");
-        sharp(caleFisAbs).resize(200).toFile(caleFisMicAbs);
-        imag.cale_imagine_mediu=path.join("/", obGlobal.obImagini.cale_galerie, "mic",numeFis+".webp" )
-        imag.cale_imagine=path.join("/", obGlobal.obImagini.cale_galerie, imag.cale_imagine )
-        //eroare.imagine="/"+obGlobal.obErori.cale_baza+"/"+eroare.imagine;
-}
-*/
 
 
 
