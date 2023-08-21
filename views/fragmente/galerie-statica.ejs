@@ -10,13 +10,13 @@
         let afisate = 0; // counterul de imagini afisate
 
                 for (let imag of img) {
-            const intervalTimp = imag.timp.split("-");
+            let intervalTimp = imag.timp.split("-");
 
-            const inceputInterval = intervalTimp[0];
-            const sfarsitInterval = intervalTimp[1];
+            let inceputInterval = intervalTimp[0];
+            let sfarsitInterval = intervalTimp[1];
 
-            const [h1, m1] = inceputInterval.split(":").map(Number);
-            const [h2, m2] = sfarsitInterval.split(":").map(Number);
+            let [h1, m1] = inceputInterval.split(":").map(Number);
+            let [h2, m2] = sfarsitInterval.split(":").map(Number);
         //acum vreau daca imaginile afisate <10 si mai sunt imagini
         //ce corespund intervalului de timp, sa le afiseze
         if (afisate < 10) {
