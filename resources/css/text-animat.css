@@ -1,17 +1,17 @@
-/* Stiluri pentru înfășurarea textului care asigură responsivitatea */
+
 .container-text-animat {
     width: 100%;
     overflow: hidden;
-    white-space: nowrap; /* Textul se va rula pe o singură linie */
+    white-space: nowrap; /* Textul va rula pe o singură linie */
 }
 
 .text-animat {
     display: inline-block;
-    animation: scrollRight 10s linear infinite; /* Animatie recurenta pe orizontală */
-    padding: 10px; /* Adăugăm puțin spațiu pentru a evita situația în care textul iese din cadru */
+    animation: scrollRight 10s linear infinite; /* recurentza orizontla */
+    padding: 10px;
 }
 
-/* Definirea animației */
+
 @keyframes scrollRight {
     0% {
         transform: translateX(-100%); /*;porneste in afara ecranului */

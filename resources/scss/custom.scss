@@ -1,0 +1,45 @@
+@use '../../node_modules/bootstrap/scss/bootstrap.scss' with (
+//de intrebat daca pot folosi variabilele mele in aici -NUUU
+//culori
+    $primary: #3BA7BF,
+    $secondary: #065769FF,
+    $body-bg: white,
+    $body-color: black,
+    $btn-link-color: #F2DC6B,
+//●	dimensiuni de ecran diferite pentru ecrane medii și mari
+    $grid-breakpoints: (xs: 0, sm: 700px, md: 1000px, lg: 1200px),
+
+//●	dimensiunea literelor  headingurilor (h1,h2 etc)
+//●	familia de font implicită
+    $font-family-base: 'Poppins',
+    $font-size-base: 1rem,
+    $h2-font-size: 2rem,
+    $h1-font-size: 3rem,
+
+
+
+ //●	dimensiunea razelor de border
+ //●	încă una sau mai mule variabile alese de voi
+    $border-radius: 0.2rem,
+    $border-radius-sm: 0.3rem,
+    $border-radius-lg: 0.4rem,
+    $border-width:1px,
+    $border-widths: (
+    1: 1px,
+    2: 2px,
+    3: 3px,
+    4: 4px,
+    5: 5px
+    ),
+
+
+
+//●	încă una sau mai mule variabile alese de voi
+
+    $input-btn-border-width:1.5px,
+    $btn-border-width: 1.5px,
+    $spacer: 2rem,
+    $hr-opacity: 1,
+
+);
+

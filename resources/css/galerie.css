@@ -5,6 +5,7 @@
 }
 
 #grid-galerie {
+    margin: 3rem;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-row-gap: 0.5em;
@@ -60,8 +61,8 @@
 }
 
 #grid-galerie img {
-    margin-top: 1rem;
-    width: 80%;
+    margin-top: 2rem;
+    width: 60%;
     transition: all 1.25s linear;
     border-radius: 1rem;
     box-shadow: 0rem 0rem 1rem var(--grey-shadow);
@@ -69,7 +70,7 @@
 }
 #grid-galerie img:hover {
     translate: 0px -15%;
-    transform: scale(130%);
+    transform: scale(120%);
     box-shadow: 0.5rem 0.8rem 1.5rem var(--grey-shadow);
 
 
@@ -86,8 +87,8 @@
 }
 
 #grid-galerie figure:hover figcaption {
-    background-color: var(--main-color); /* schimb culoarea de fundal */
-    color: var(--background-color); /* schimb culoarea fontului */
+    background-color: var(--main-color);
+    color: var(--background-color);
     border-radius: 1rem;
     box-shadow: 0.5rem 0.8rem 1.5rem var(--grey-shadow);
 }

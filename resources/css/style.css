@@ -83,7 +83,9 @@ body {
 #diverse {
     grid-area: z-diverse;
 }
-
+a {
+    color: var(--culoare-text-meniu)
+}
 /* Stilurile pentru linkurile vizitate */
 a:visited {
     color: var(--text-color);
@@ -192,17 +194,17 @@ img.poster {
 }
 #h2reflexie {
     position: absolute;
-    left: 0;
-    top: 100%;
+    left: -5px;
+    top: 95%;
     transform-origin: 0 0;
     /* ransform  reflexia */
-    transform: rotateX(180deg) skew(-45deg) scaleY(0.4) translate(10px, -25px);
+    transform: rotateX(180deg) skew(-45deg) scaleY(0.6) translate(10px, -25px);
     opacity: 0.55;
     transition: transform 0.5s, filter 0.5s, opacity 0.5s;
     filter: blur(1px); /*  efectul de blur la reflexie */
 }
 #h2reflexie:hover {
-    transform: rotateX(180deg) skew(-45deg) scaleY(1.2) translate(10px, -40px); /* lungesc reflexia */
+    transform: rotateX(180deg) skew(-45deg) scaleY(1) translate(10px, -35px); /* lungesc reflexia */
     opacity: 0.55;
     filter: blur(1px);
 }
@@ -215,7 +217,6 @@ h3::selection {
 /* stil pt  tag hr */
 hr {
     height: 0.65rem;
-    width: 90%;
     background: linear-gradient( #3BA7BF, #d9f1fd, #3BA7BF, #d9f1fd, #3BA7BF, #d9f1fd); /* Gradient liniar între roșu și albastru */
     border-radius: 10px;
     margin: 10px 10px; /* pt spatierea in pagina */

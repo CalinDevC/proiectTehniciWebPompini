@@ -19,27 +19,26 @@
             let [h2, m2] = sfarsitInterval.split(":").map(Number);
         //acum vreau daca imaginile afisate <10 si mai sunt imagini
         //ce corespund intervalului de timp, sa le afiseze
-        if (afisate < 10) {
-        if (h1 * 60 + m1 <= oraCurenta * 60 + minutulCurent /*&& oraCurenta * 60 + minutulCurent*/ <= h2 * 60 + m2) {
+
+        if (h1 * 60 + m1 <= oraCurenta * 60 + minutulCurent && oraCurenta * 60 + minutulCurent <= h2 * 60 + m2) {
         %>
             <figure>
-                <img src="<%= imag.cale_imagine %>"  alt="<%= imag.title %>" title="<%= imag.titlu %>">
+            <picture>
+                <source srcset="<%- imag.cale_imagine_mic %>" media="(max-width:700px)" />
+                <source srcset="<%- imag.cale_imagine_mediu %>" media="(max-width:1000px)" />
+                <img src="<%= imag.cale_imagine %>"  alt="<%= imag.titlu %>" title="<%= imag.titlu %>">
                 <figcaption><%= imag.descriere %></figcaption>
+            </picture>
             </figure>
+
+        <% } %>
+
+<!--            if (afisate < 10){-->
+<!--            <figure>-->
+<!--                <img src="/resources/img/erori/lupa.png" alt="Imagine lipsa" title="Imagine lipsa">-->
+<!--                <figcaption>Imagine lipsă</figcaption>-->
+<!--            </figure>-->
         <%
-            afisate++;
-            console.log(afisate)
-        }  else { //daca afisate < 10 si nu mai sunt imagini care coresound intervalului de timp
-                  //sa imi arate imaginea cu lupa de am folosit-o si la eroare
-                    //dar imi arata numai ce vrea el
-        %>
-            <figure>
-                <img src="/resources/img/erori/lupa.png" alt="Imagine lipsa" title="Imagine lipsa">
-                <figcaption>Imagine lipsă</figcaption>
-            </figure>
-        <%
-        }
-        }
         }
         %>
     </div>
