@@ -1,6 +1,8 @@
 @use '../../node_modules/bootstrap/scss/bootstrap.scss' with (
 //de intrebat daca pot folosi variabilele mele in aici -NUUU
 //culori
+
+
     $primary: #3BA7BF,
     $secondary: #065769FF,
     $body-bg: white,
@@ -15,6 +17,8 @@
     $font-size-base: 1rem,
     $h2-font-size: 2rem,
     $h1-font-size: 3rem,
+    $h3-font-size: 1.5rem,
+
 
 
 
@@ -36,10 +40,46 @@
 
 //●	încă una sau mai mule variabile alese de voi
 
-    $input-btn-border-width:1.5px,
-    $btn-border-width: 1.5px,
+    $input-btn-border-width: 0.2em,
+    $btn-border-width: 3em,
     $spacer: 2rem,
     $hr-opacity: 1,
 
 );
+
+
+    // Tema 1
+    $temaLight-bg: #FFFFFF;
+    $temaLight-text-color: #000000;
+
+    // Tema 2 - bck variabila din theme --border-color: #2D83A6;
+    $temaDark-bg: #2D83A6;
+    $temaDark-text-color: #FFFFFF;
+
+    // Tema 3
+    $temaCustom-bg: #F2DC6B;
+    $temaCustom-text-color: #333333;
+
+    //aplic variabilele in teme
+
+    // Pentru light
+
+body {
+    background-color: $temaLight-bg;
+    color: $temaLight-text-color;
+}
+
+// Pentru dark
+.temaDark {
+    background-color: $temaDark-bg;
+    color: $temaDark-text-color;
+}
+
+// Pentru custom
+.temaCustom {
+    background-color: $temaCustom-bg;
+    color: $temaCustom-text-color;
+}
+
+
 

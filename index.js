@@ -57,6 +57,8 @@ app.get(["/", "/index", "/home"], function (req, res) {
     res.render("pagini/index", {ip:req.ip, img: obGlobal.obImagini.imagini});
 });
 
+
+
 app.get("/paginatest", function (req, res) {
     res.render("pagini/paginatest");
 });
@@ -68,6 +70,10 @@ app.get("/preturi-montaj", function (req, res) {
 app.get(["/galerie-statica"], function (req, res) {
     res.render("pagini/galerie-statica", {img: obGlobal.obImagini.imagini});
 });
+
+// app.get(["/galerie-animata"], function (req, res) {
+//     res.render("pagini/galerie-animata", {img: obGlobal.obImagini.imagini});
+// });
 
 app.get("/ceva", function (req, res) {
     res.send("altceva");
@@ -97,9 +103,6 @@ function compileazaScss(caleScss, caleCss){
         caleScss=path.join(obGlobal.folderScss,caleScss )
     if (!path.isAbsolute(caleCss))
         caleCss=path.join(obGlobal.folderCss,caleCss )
-
-
-
 
     // la acest punct avem cai absolute in caleScss si  caleCss
 
@@ -240,6 +243,30 @@ function initImagini(){
     }
 }
 initImagini();
+
+/*----------sectiune intitializare imagini  Galerie Animata --------------------*/
+
+app.get("/galerie-animata", function (req, res) {
+
+    // la fiecare request al paginii generez un nr random de imagini
+    let nrImagini = randomInt(3, 12);
+    if (nrImagini % 3 == 0) nrImagini++;
+
+    let stringImg = "$nrImg: " + nrImagini + ";";
+
+    // se va compila automat din functia compileaza_scss cand se schimba
+    fs.writeFileSync(fisScss, liniiFisScss.join("\n"));
+
+    res.render("pagini/galerie-animata.ejs", {
+        imagini: obGlobal.obImages.images,
+        nrImagini: nrImagini,
+
+    });
+});
+
+app.get("*/galerie-animata.css.map",function(req, res){
+    res.sendFile(path.join(__dirname,"temp/galerie-animata.css.map"));
+});
 
 
 app.listen(8080);

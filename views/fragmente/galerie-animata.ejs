@@ -1,0 +1,17 @@
+<div id="galerie_animata" class="galerie-a">
+
+
+
+<% for (let imag of img ) {
+    %>
+        <figure>
+            <picture>
+                <source srcset="<%- imag.cale_imagine_mic %>" media="(max-width:700px)" />
+                <source srcset="<%- imag.cale_imagine_mediu %>" media="(max-width:1000px)" />
+                <img src="<%= imag.cale_imagine %>"  alt="<%= imag.titlu %>" title="<%= imag.titlu %>">
+                <figcaption><%= imag.descriere %></figcaption>
+            </picture>
+            <figcaption><%- imag.descriere %></figcaption>
+        </figure>
+    <% }  %>
+</div>
