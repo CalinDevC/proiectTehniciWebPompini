@@ -1,0 +1,125 @@
+main {
+  --padd-main:1rem;
+  padding-left: var(--padd-main);
+  padding-right: var(--padd-main);
+}
+
+.grid-produse {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Afiseaza produsele pe doua coloane egale */
+  grid-gap: 6rem;
+  margin: 2rem;
+}
+
+.grid-produse .produs {
+  border-top-left-radius: 3rem;
+  border-bottom-right-radius: 3rem;
+  box-shadow: 0px 0px 0.8rem 0.3rem grey;
+  overflow: hidden;
+  padding: 0rem;
+  transition-duration: 0.5s;
+
+}
+
+.grid-produse .produs:hover {
+  box-shadow: 0 0 50px var(--border-color); /* Efectul de umbrire la hover */
+  opacity: 85%;
+}
+
+.grid-produse .produs h3 {
+  background-color: var(--border-color);
+  text-align: center;
+  margin-top: 0rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+
+}
+
+.grid-produse .produs h3 a {
+  color: black;
+}
+
+.grid-produse .produs h3 a:hover {
+  color: white;
+}
+
+.grid-produse .produs figure {
+  text-align: center;
+}
+
+.grid-produse .produs figure img {
+  border: 1px solid grey;
+}
+
+.grid-produse .produs .info-prod {
+  display: flex;
+  background-color: var(--highlight-color);
+}
+
+.grid-produse .produs .info-prod p {
+  width: 30%;
+  text-align: center;
+  font-weight: bold;
+}
+
+.grid-produse .produs p.categorie {
+  text-align: center;
+  font-weight: bold;
+  color: var(--main-color);
+}
+
+.grid-produse .produs p.categorie span {
+  color: black;
+}
+
+.grid-produse .produs p.descriere {
+  text-align: left;
+  font-weight: bold;
+  color: var(--main-color);
+  padding: 1rem;
+}
+
+.grid-produse .produs p.descriere span {
+  text-align: center;
+  font-weight: normal;
+  color: var(--text-color);
+}
+
+.info-produse {
+  background-color: var(--highlight-color);
+  padding: 0.2rem;
+  box-shadow: 0px 0px 0.5rem 0.15rem grey;
+}
+
+.produs {
+  position: relative;
+}
+
+.selecteaza-cos {
+  display: inline-block;
+  background-color: var(--main-color);
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0.5rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  padding: 0.3rem;
+  border: 1px solid transparent;
+  margin:0.5rem;
+}
+
+.selecteaza-cos:hover {
+  background-color: var(--highlight-color);
+  border: 1px solid var(--border-color);
+}
+
+.grid-produse .produs .info ul li p {
+  font-weight: bold;
+  color: var(--border-color);
+}
+
+.grid-produse .produs .info ul li p span {
+  font-weight: normal;
+  color: black;
+}
+

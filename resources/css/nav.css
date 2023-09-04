@@ -7,7 +7,7 @@
 }
 body {
     --border-grosime:2px;
-    --latime-buton: 200px;
+    --latime-buton: 180px;
     --inaltime-nav:50px;
     --spatiere-main:45px;
     --culoare-text-meniu:#F2DC6B;
@@ -24,6 +24,7 @@ nav {
     position: sticky;
     top: 0;
     z-index: 1;
+
 }
 
 ul.meniu li {
@@ -57,13 +58,13 @@ ul.meniu li a, ul.meniu li div {
     cursor: pointer;
 
 }
-/*animatie sagetica urata (cer permisiunea sa o scot din site :)))*/
-ul.meniu li ul li a::before {
-    content: "→";
-    opacity: 0;
-    position: absolute; /*ca sa nu primeasca pozitie si sa fie legat de elementul superior in tree*/
-    left: 10px;
-}
+/*!*animatie sagetica urata (cer permisiunea sa o scot din site :)))*!*/
+/*ul.meniu li ul li a::before {*/
+/*    content: "→";*/
+/*    opacity: 0;*/
+/*    position: absolute; !*ca sa nu primeasca pozitie si sa fie legat de elementul superior in tree*!*/
+/*    left: 10px;*/
+/*}*/
 
 ul.meniu li ul li a:hover::before {
     opacity: 1;

@@ -1,0 +1,79 @@
+@charset "UTF-8";
+/* CSS pentru grid-produse */
+.grid-produse {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Afișează produsele pe două coloane egale */
+  grid-gap: 20px; /* Spațiu între produse */
+}
+
+/* Stilizare pentru articolul produs */
+.produs {
+  display: grid;
+  grid-gap: 1rem;
+  border-radius: 2rem;
+  box-shadow: 0px 0px 0.8rem 0.3rem grey;
+  overflow: hidden;
+  padding: 1rem;
+}
+
+/* Stilizare pentru numele entității */
+.produs h3 {
+  background-color: var(--border-color);
+  text-align: center;
+  margin: 0;
+  padding: 0.5rem;
+}
+
+.produs h3 a {
+  color: black;
+}
+
+.produs h3 a:hover {
+  color: white;
+}
+
+/* Stilizare pentru containerul info */
+.info {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Două coloane */
+}
+
+/* Stilizare pentru prima coloana (Imagine și Informații) */
+.colImagineInformatii {
+  text-align: center;
+}
+
+.colImagineInformatii img {
+  max-width: 100%;
+  border: 1px solid grey;
+}
+
+.colImagineInformatii ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.colImagineInformatii li {
+  margin: 0.5rem 0;
+}
+
+/* Stilizare pentru a doua coloană (Categorie și Descriere) */
+.colCategorieDescriere {
+  padding-left: 1rem;
+}
+
+.categorie {
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Stilizare pentru descriere */
+.colCategorieDescriere p:last-child {
+  margin-bottom: 0;
+}
+
+/* Stilizare pentru data */
+time {
+  font-style: italic;
+  color: var(--highlight-color);
+}

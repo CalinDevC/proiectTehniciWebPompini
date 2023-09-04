@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta name="description" content="Pompini.ro iti ofera toata gama de pompe si automatizari, presostate, variatoare cu optiunea de achizitie online si livrare prin curier.">
+    <meta name="keywords" content="pompe submersibile, variatoare de turatie, convertizor de frecventa, presostat electronic">
+    <link rel="stylesheet" href="/resurse/css/produse.css" type="text/css" />
+    <title>Pompini.ro - home</title>
+    <%- include("../fragmente/head") %>
+</head>
+<body>
+<%- include("../fragmente/header") %>
+
+<main>
+    <p id="p-suma">Apăsați Alt+"c" pentru suma prețurilor produselor afișate.</p>
+    <section id="produse">
+        <h2>Produse</h2>
+        <div class="grid-produse">
+            <% for (let prod of locals.produse) { %>
+                <article class="produs">
+                    <h3 class="nume">Nume: <a href="/produs/<%- prod.id %>"><span class="val-nume"><%- prod.nume %></span></a></h3>
+                    <div class="info">
+                        <div class="colImagineInformatii">
+                            <figure>
+                                <a href="/produs/<%- prod.id %>"><img src="/resources/img/produse/<%- prod.imagine %>" style="width: 50%; height: auto;" alt="[imagine <%- prod.nume %>]" /></a>
+                            </figure>
+                            <ul>
+                                <li><p class="pret">Pret: <span class="val-pret"><%- prod.pret %></span> lei</p></li>
+                                <li><p class="putere">Putere: <span class="val-putere"><%- prod.putere %></span></p></li>
+                                <li><p class="debit">Debit: <span class="val-debit"><%- prod.debit %></span> m3/h</p></li>
+                                <li><p class="dataAdaugare">Data adaugare: <span class="val-data"><%- prod.data_adaugare %></span></p></li>
+                                <li><p class="rezistentaLaNisip">Rezistența la nisip: <span class="val-rezistenta"><%- prod.rezistenta_la_nisip ? 'Da' : 'Nu' %></span></p></li>
+
+                            </ul>
+                        </div>
+                        <div class="colCategorieDescriere">
+                            <p class="categorie">Categorie: <span class="val-categorie"><%- prod.categorie %></span></p>
+                            <p class="descriere">Descriere: <span class="val-descriere"><%- prod.descriere %></span></p>
+                            <label class="selecteaza-cos">
+                                Selectează:<br/>
+                                <input type="checkbox" class="select-cos" value="<%- prod.id %>" autocomplete="off">
+                            </label>
+                        </div>
+                    </div>
+                </article>
+            <% } %>
+        </div>
+    </section>
+</main>
+
+<%- include("../fragmente/footer") %>
+</body>
+</html>

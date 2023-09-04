@@ -7,7 +7,17 @@ const {response} = require("express"); // creez, citesc, verific un fisier
 const sharp = require("sharp"); // modulul redimensionare imagini
 const sass = require("sass");
 const ejs = require("ejs");
+const {Client} = require('pg');
 
+
+//conexiunea la baza de date
+var client= new Client({
+    database:"pompini_tw",
+    user:"calin",
+    password:"parola",
+    host:"localhost",
+    port:5432});
+client.connect();
 
 //conventie notare variabila globala
 obGlobal={
@@ -177,6 +187,35 @@ function afisEroare(res, _indentificator=-1, _titlu, _text, _imagine){
     }
 
 }
+
+/************************Produse******************* */
+
+app.get("/produse", function(req, res){
+    let restComanda="where 1=1 ";
+    if(req.query.tip){
+        restComanda+=`and tip_produs='${req.query.tip}'`
+
+    }
+
+
+    client.query(`select * from pompe ` + restComanda, function(err, rez){
+        console.log(rez);
+        res.render("pagini/produse", {produse: rez.rows, optiuni:[]})
+    })
+})
+
+app.get("/produs/:id", function(req, res){
+    console.log(req.params)
+    client.query(`select * from pompe where id=${req.params.id}`, function(err, rez){
+        console.log(err);
+        console.log(rez);
+        res.render("pagini/produs", {prod: rez.rows[0]})
+   })
+})
+
+
+
+
 
 app.get("/*.ejs", function (req, res){
     afisEroare(res,400)

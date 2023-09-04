@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html  lang="ro">
+<head>
+    <meta name="description" content="Pompini.ro iti ofera toata gama de pompe si automatizari, presostate, variatoare cu optiunea de achizitie online si livrare prin curier.">
+    <meta name="keywords" content="poompe submersibile, variatoare de turatie, convertizor de frecventa, presostat electronic">
+
+    <title>Pompini.ro - home</title>
+    <%- include("../fragmente/head") %>
+<!--    <link href="/resources/css/produs.css" type="text/css" rel="stylesheet" />-->
+</head>
+<body>
+<%- include("../fragmente/header") %>
+
+<main>
+    <section>
+        <h2>Pagina produs</h2>
+        <article id="art-produs">
+            <h3><span class="nume"><%- locals.prod.nume %></span></h3>
+            <p>Pret: <span class="pret"><%- locals.prod.pret %> </span></p>
+            <p>Descriere: <span class="descriere"><%- locals.prod.descriere %> </span></p>
+            <p>Optiuni: <span class="optiuni"><%- locals.prod.optiuni %> </span></p>
+            <p>Putere motor(W): <span class="putere"><%- locals.prod.putere_motor %> </span></p>
+            <p>Debit(m3/h): <span class="debit"><%- locals.prod.debit %> </span></p>
+            <p>Categorie: <span class="categorie"><%- locals.prod.categorie %> </span></p>
+            <p>Rezistenta la nisip: <span class="rezistenta_la_nisip"><%- locals.prod.rezistenta_la_nisip %> </span></p>
+            <p>Data adaugare: <span class="categorie"><%- locals.prod.data_adaugare %> </span></p>
+            <figure class="imag-produs">
+                <img  src="/resources/img/produse/<%- locals.prod.imagine %>" alt="[imagine <%- locals.prod.nume %>]" />
+            </figure>
+        </article>
+
+    </section>
+</main>
+
+<%- include("../fragmente/footer") %>
+</body>
+</html>
